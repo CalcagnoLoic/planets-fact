@@ -1,9 +1,9 @@
 @font-face {
-    font-family: antonio;
-    src: url("../fonts/Antonio/Antonio-Regular.ttf") format(.ttf);
+  font-family: antonio;
+  src: url("../fonts/Antonio/Antonio-Regular.ttf") format(.ttf);
 }
 
 @font-face {
-    font-family: spartan;
-    src: url("../fonts/League_Spartan/LeagueSpartan-Regular.ttf") format(.ttf);
+  font-family: spartan;
+  src: url("../fonts/League_Spartan/LeagueSpartan-Regular.ttf") format(.ttf);
 }
