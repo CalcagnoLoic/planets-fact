@@ -19,8 +19,11 @@ export default {
       },
       fontFamily: {
         antonio: ["antonio"],
-        leagueSpartan: ["spartan"]
-      }
+        leagueSpartan: ["spartan"],
+      },
+      backgroundImage: {
+        stars: "url(./public/assets/img/background.svg)",
+      },
     },
   },
   plugins: [],
