@@ -4,14 +4,24 @@ export const Icons = ({ kind }: IconProps) => {
   switch (kind) {
     case "chevron":
       return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="8">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="6"
+          height="8"
+          className="self-center"
+        >
           <path fill="none" stroke="#FFF" opacity=".4" d="M1 0l4 4-4 4" />
         </svg>
       );
 
     case "menu":
       return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="17"
+          className="flex md:hidden cursor-pointer hamburger"
+        >
           <g fill="#FFF" fill-rule="evenodd">
             <path d="M0 0h24v3H0zM0 7h24v3H0zM0 14h24v3H0z" />
           </g>
@@ -28,7 +38,7 @@ export const Icons = ({ kind }: IconProps) => {
           />
         </svg>
       );
-      
+
     default:
       return null;
   }

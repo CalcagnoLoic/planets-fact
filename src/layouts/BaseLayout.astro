@@ -1,5 +1,8 @@
 ---
-import "../../public/assets/style/index.css";
+import "../../src/style/index.css";
+
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 const { pageTitle } = Astro.props;
 ---
@@ -12,7 +15,17 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
     <link rel="shortcut icon" href="public/favicon.svg" type="image/x-icon" />
   </head>
-  <body>
-    <slot />
+  <body class="bg-stars bg-blackPearl h-screen flex flex-col justify-between">
+    <header class="border-b-[1px] border-b-white">
+      <Header />
+    </header>
+
+    <main class="mx-auto">
+      <slot />
+    </main>
+
+    <Footer />
+
+    <script src="../scripts/menu.ts"></script>
   </body>
 </html>
