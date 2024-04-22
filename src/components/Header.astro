@@ -1,17 +1,6 @@
 ---
 import Dropdown from "./Dropdown.astro";
-import { Icons } from "../icons/Icons";
-
-const name_planet: Array<string> = [
-  "mercury",
-  "venus",
-  "earth",
-  "mars",
-  "jupiter",
-  "saturn",
-  "uranus",
-  "neptune",
-];
+import Navbar from "./Navbar.astro";
 ---
 
 <nav
@@ -23,43 +12,6 @@ const name_planet: Array<string> = [
     the planets
   </h1>
 
-  <div class="self-center">
-    <div class="hidden md:flex gap-8 font-bold">
-      {
-        name_planet.map((item) => (
-          <a
-            class="text-white uppercase cursor-pointer"
-            href={`/space-fact/${item}`}
-          >
-            {item}
-          </a>
-        ))
-      }
-    </div>
-
-    <Icons kind="menu" client:load />
-  </div>
-
+  <Navbar />
   <Dropdown />
 </nav>
-
-<script>
-  let menuIsOpen = false;
-
-  const toggleMenu = () => {
-    const menu = document.querySelector(".menu-dropdown");
-    
-    if (menuIsOpen) {
-      menu?.classList.add("hidden");
-      menuIsOpen = false;
-    } else {
-      menu?.classList.remove("hidden");
-      menuIsOpen = true;
-    }
-  };
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const menu = document.querySelector(".hamburger");
-    menu?.addEventListener("click", toggleMenu);
-  });
-</script>

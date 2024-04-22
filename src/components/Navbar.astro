@@ -11,8 +11,6 @@ const name_planet: Array<string> = [
   "uranus",
   "neptune",
 ];
-
-const { isOpen } = Astro.props;
 ---
 
 <div class="self-center">
@@ -29,5 +27,5 @@ const { isOpen } = Astro.props;
     }
   </div>
 
-  <Icons kind="menu" isOpen={isOpen} client:load />
+  <Icons kind="menu" client:load />
 </div>
