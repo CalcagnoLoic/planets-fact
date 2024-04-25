@@ -1,0 +1,28 @@
+---
+const tabs = ["overview", "structure", "surface"];
+let selectedTab = tabs[0];
+
+const { colorTab } = Astro.props;
+---
+
+<div
+  class="flex content-around justify-between border-b-[1px] border-b-brightGray py-5 text-xs font-bold uppercase tracking-widest text-brightGray md:hidden"
+>
+  {
+    tabs.map((tab) => (
+      <div class="cursor-pointer">
+        <span
+          class={`${
+            selectedTab === tab
+              ? `border-b-4 ${colorTab} pb-4 text-white`
+              : ""
+          }`}
+        >
+          {tab}
+        </span>
+      </div>
+    ))
+  }
+</div>
+
+<slot />

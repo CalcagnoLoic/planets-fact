@@ -4,14 +4,15 @@ import Navbar from "./Navbar.astro";
 ---
 
 <nav
-  class="flex md:flex-col xl:flex-row justify-between md:justify-center xl:justify-between m-8"
+  class="my-8 mx-6 flex justify-between md:flex-col md:justify-center xl:flex-row xl:justify-between"
 >
   <h1
-    class="uppercase font-antonio text-3xl text-white font-bold text-start md:text-center md:mb-10 xl:mb-0 xl:text-start"
+    class="text-start font-antonio text-3xl font-bold uppercase text-white md:mb-10 md:text-center xl:mb-0 xl:text-start"
   >
     the planets
   </h1>
 
   <Navbar />
+
   <Dropdown />
 </nav>
