@@ -1,7 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import MobileTabsLayout from "../layouts/MobileTabsLayout.astro";
 
 const pageTitle = "Earth";
 ---
 
-<BaseLayout pageTitle={pageTitle} />
+<BaseLayout pageTitle={pageTitle}>
+  <MobileTabsLayout colorTab="border-b-purpleHeart" />
+</BaseLayout>

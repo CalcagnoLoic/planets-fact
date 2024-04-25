@@ -1,7 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import MobileTabsLayout from "../layouts/MobileTabsLayout.astro";
 
 const pageTitle = "Neptune";
 ---
 
-<BaseLayout pageTitle={pageTitle} />
+<BaseLayout pageTitle={pageTitle}>
+    <MobileTabsLayout colorTab="border-b-royalBlue" />
+  </BaseLayout>
+  
