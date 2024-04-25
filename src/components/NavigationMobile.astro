@@ -7,7 +7,7 @@ const { color, name, target } = Astro.props;
 <div class="flex justify-between p-5 border-y-[1px] border-y-brightGray">
   <div class="flex gap-5">
     <div class={`w-5 h-5 rounded-full ${color}`}></div>
-    <a href={target} class="self-center text-white uppercase font-bold"
+    <a href={`/space-fact/${target}`} class="self-center text-white uppercase font-bold"
       >{name}</a
     >
   </div>

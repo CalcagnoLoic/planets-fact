@@ -16,6 +16,9 @@ export default {
         piper: "#CD5120",
         java: "#1EC2A4",
         royalBlue: "#2D68F0",
+        tacao:"#ECAD7A",
+        goldenrod: "#FCCB6B",
+        foam: "#DEF4FC"
       },
       fontFamily: {
         antonio: ["antonio"],

@@ -2,24 +2,24 @@
 import { Icons } from "../icons/Icons";
 
 const name_planet: Array<string> = [
-  "mercury",
-  "venus",
-  "earth",
-  "mars",
-  "jupiter",
-  "saturn",
-  "uranus",
-  "neptune",
+  "Mercury",
+  "Venus",
+  "Earth",
+  "Mars",
+  "Jupiter",
+  "Saturn",
+  "Uranus",
+  "Neptune",
 ];
 ---
 
 <div class="self-center">
-  <div class="hidden md:flex gap-8 font-bold">
+  <div class="hidden gap-8 font-bold md:flex">
     {
       name_planet.map((item) => (
         <a
-          class="text-white uppercase cursor-pointer"
-          href={`/space-fact/${item}`}
+          class="cursor-pointer uppercase text-white"
+          href={`/space-fact/${item === "Mercury" ? "" : item}`}
         >
           {item}
         </a>
@@ -27,5 +27,5 @@ const name_planet: Array<string> = [
     }
   </div>
 
-  <Icons kind="menu" client:load />
+  <Icons kind="menu" />
 </div>
