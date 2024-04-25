@@ -1,16 +1,47 @@
 ---
 import { Icons } from "../icons/Icons";
+import type { NavLinkProps } from "../types/interface";
 
-const name_planet: Array<string> = [
-  "Mercury",
-  "Venus",
-  "Earth",
-  "Mars",
-  "Jupiter",
-  "Saturn",
-  "Uranus",
-  "Neptune",
+const name_planet: NavLinkProps[] = [
+  {
+    name: "Mercury",
+    borderColor: "border-b-pelorous",
+  },
+  {
+    name: "Venus",
+    borderColor: "border-b-tulipTree",
+  },
+  {
+    name: "Earth",
+    borderColor: "border-b-purpleHeart",
+  },
+  {
+    name: "Mars",
+    borderColor: "border-b-valencia",
+  },
+  {
+    name: "Jupiter",
+    borderColor: "border-b-darkValencia",
+  },
+  {
+    name: "Saturn",
+    borderColor: "border-b-piper",
+  },
+  {
+    name: "Uranus",
+    borderColor: "border-b-java",
+  },
+  {
+    name: "Neptune",
+    borderColor: "border-b-royalBlue",
+  },
 ];
+
+const currentPlanet =
+  Astro.url.pathname === "/space-fact/"
+    ? "Mercury"
+    : name_planet.find((planet) => Astro.url.pathname.includes(planet.name))
+        ?.name || null;
 ---
 
 <div class="self-center">
@@ -18,10 +49,14 @@ const name_planet: Array<string> = [
     {
       name_planet.map((item) => (
         <a
-          class="cursor-pointer uppercase text-white"
-          href={`/space-fact/${item === "Mercury" ? "" : item}`}
+          class="cursor-pointer uppercase text-white opacity-80"
+          href={`/space-fact/${item.name === "Mercury" ? "" : item.name}`}
         >
-          {item}
+          <span
+            class={`border-b-4 md:pb-8 xl:pb-9 ${currentPlanet === item.name ? item.borderColor : "border-b-transparent"}`}
+          >
+            {item.name}
+          </span>
         </a>
       ))
     }

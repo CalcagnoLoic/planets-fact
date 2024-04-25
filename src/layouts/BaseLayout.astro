@@ -1,5 +1,6 @@
 ---
 import "../../src/style/index.css";
+import { ViewTransitions } from "astro:transitions";
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -13,7 +14,7 @@ const { pageTitle } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Calcagno Loïc" />
-    <meta name="description" content="TODO" />
+    <meta name="description" content={Astro.generator} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,7 +23,9 @@ const { pageTitle } = Astro.props;
     />
     <title>{pageTitle}</title>
     <link rel="shortcut icon" href="public/favicon.svg" type="image/x-icon" />
+    <ViewTransitions />
   </head>
+
   <body class="bg-blackPearl bg-stars">
     <header class="border-b-[1px] border-b-brightGray">
       <Header />
