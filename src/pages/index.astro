@@ -1,10 +1,19 @@
 ---
+import { dataFact, namePlanet } from "../data/data";
+import { getPlanetName } from "../scripts/getPlanetName";
+
 import BaseLayout from "../layouts/BaseLayout.astro";
 import MobileTabsLayout from "../layouts/MobileTabsLayout.astro";
+import PlanetOverview from "../components/PlanetOverview.astro";
 
 const pageTitle = "Mercury";
+const currentPlanet = getPlanetName(Astro.url.pathname, namePlanet);
+
+const mercuryData = dataFact.find((planet) => planet.name === currentPlanet);
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <MobileTabsLayout colorTab="border-b-pelorous" />
+
+  <PlanetOverview planet={mercuryData} />
 </BaseLayout>
