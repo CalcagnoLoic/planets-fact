@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { getPlanetName } from "../src/scripts/getPlanetName";
-import { namePlanet } from "../src/data/data";
+import { getPlanetName } from "./getPlanetName";
+import { namePlanet } from "../data/data";
 
 describe("getPlanetName Unit Test Suite", () => {
   it("should be render Mercury", () => {
