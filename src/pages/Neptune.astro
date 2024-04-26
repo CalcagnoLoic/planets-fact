@@ -1,10 +1,20 @@
 ---
+import { getPlanetName } from "../scripts/getPlanetName";
+import { namePlanet } from "../data/data";
+
 import BaseLayout from "../layouts/BaseLayout.astro";
+import dataFact from "../data/data.json";
 import MobileTabsLayout from "../layouts/MobileTabsLayout.astro";
+import PlanetOverview from "../components/PlanetOverview.astro";
 
 const pageTitle = "Neptune";
+const currentPlanet = getPlanetName(Astro.url.pathname, namePlanet);
+
+const neptuneData = dataFact.find((planet) => planet.name === currentPlanet);
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <MobileTabsLayout colorTab="border-b-royalBlue" />
+
+  <PlanetOverview planet={neptuneData} />
 </BaseLayout>
