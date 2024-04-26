@@ -7,7 +7,7 @@ import dataFact from "../data/data.json";
 import PlanetOverview from "../components/PlanetOverview.astro";
 import PlanetCharacteristic from "../components/PlanetCharacteristic.astro";
 
-const pageTitle = "Uranus";
+const pageTitle = "🟢 Uranus";
 const currentPlanet = getPlanetName(Astro.url.pathname, namePlanet);
 
 const uranusData = dataFact.find((planet) => planet.name === currentPlanet);
