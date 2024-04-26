@@ -3,18 +3,37 @@ import { getPlanetName } from "../scripts/getPlanetName";
 import { namePlanet } from "../data/data";
 
 import BaseLayout from "../layouts/BaseLayout.astro";
-import dataFact from "../data/data.json"
+import dataFact from "../data/data.json";
 import MobileTabsLayout from "../layouts/MobileTabsLayout.astro";
+import PlanetCharacteristic from "../components/PlanetCharacteristic.astro";
 import PlanetOverview from "../components/PlanetOverview.astro";
 
 const pageTitle = "Jupiter";
-const currentPlanet = getPlanetName(Astro.url.pathname, namePlanet)
+const currentPlanet = getPlanetName(Astro.url.pathname, namePlanet);
 
-const jupiterData = dataFact.find(planet => planet.name === currentPlanet)
+const jupiterData = dataFact.find((planet) => planet.name === currentPlanet);
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <MobileTabsLayout colorTab="border-b-darkValencia" />
 
   <PlanetOverview planet={jupiterData} />
+
+  <div
+    class="mt-8 grid grid-cols-1 gap-2 md:mt-12 md:grid-cols-4 xl:mt-16 xl:gap-8"
+  >
+    <PlanetCharacteristic
+      characteristic="rotation time"
+      data={jupiterData?.rotation}
+    />
+    <PlanetCharacteristic
+      characteristic="revolution time"
+      data={jupiterData?.revolution}
+    />
+    <PlanetCharacteristic characteristic="radius" data={jupiterData?.radius} />
+    <PlanetCharacteristic
+      characteristic="average temp."
+      data={jupiterData?.temperature}
+    />
+  </div>
 </BaseLayout>

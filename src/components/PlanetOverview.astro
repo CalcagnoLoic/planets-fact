@@ -3,7 +3,6 @@ import { Icons } from "../icons/Icons";
 
 const { planet } = Astro.props;
 console.log(planet);
-
 ---
 
 <div class="flex flex-col items-center xl:flex-row xl:justify-around">
@@ -24,7 +23,7 @@ console.log(planet);
       <p class="mt-4 text-center md:mt-6 md:text-start">
         {planet?.overview.content}
       </p>
-      <div class="flex gap-4">
+      <div class="flex justify-center gap-4 md:justify-start">
         <p class="mt-8 opacity-70">
           Source: <a
             href={planet?.overview.source}
