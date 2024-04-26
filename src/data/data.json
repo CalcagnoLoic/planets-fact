@@ -42,7 +42,7 @@
     "revolution": "224.7 Days",
     "radius": "6,051.8 KM",
     "temperature": "471°c",
-    "size": "h-[154px] w-[154px] md:h-[253px] md:w-[253px] xl:h-[400px] xl:w-[400px]",
+    "size": "h-[154px] w-[154px] md:h-[253px] md:w-[253px] xl:h-[400px] xl:w-[400px] mb-[98px] xl:mb-0",
     "images": {
       "planet": "../../space-fact/public/assets/img/planet-venus.svg",
       "internal": "./assets/planet-venus-internal.svg",
@@ -67,7 +67,7 @@
     "revolution": "365.26 Days",
     "radius": "6,371 KM",
     "temperature": "16°c",
-    "size": "h-[173px] w-[173px] md:h-[285px] md:w-[285px] xl:h-[450px] xl:w-[450px]",
+    "size": "h-[173px] w-[173px] md:h-[285px] md:w-[285px] xl:h-[450px] xl:w-[450px] mb-[98px] xl:mb-0",
     "images": {
       "planet": "../../space-fact/public/assets/img/planet-earth.svg",
       "internal": "./assets/planet-earth-internal.svg",
@@ -92,7 +92,7 @@
     "revolution": "1.88 Years",
     "radius": "3,389.5 KM",
     "temperature": "-28°c",
-    "size": "h-[129px] w-[129px] md:h-[213px] md:w-[213px] xl:h-[336px] xl:w-[336px]",
+    "size": "h-[129px] w-[129px] md:h-[213px] md:w-[213px] xl:h-[336px] xl:w-[336px] mb-[98px] xl:mb-0",
     "images": {
       "planet": "../../space-fact/public/assets/img/planet-mars.svg",
       "internal": "./assets/planet-mars-internal.svg",
@@ -117,7 +117,7 @@
     "revolution": "11.86 Years",
     "radius": "69,911 KM",
     "temperature": "-108°c",
-    "size": "h-[224px] w-[224px] md:h-[369px] md:w-[369px] xl:h-[582px] xl:w-[582px]",
+    "size": "h-[224px] w-[224px] md:h-[369px] md:w-[369px] xl:h-[582px] xl:w-[582px] mb-[98px] xl:mb-0",
     "images": {
       "planet": "../../space-fact/public/assets/img/planet-jupiter.svg",
       "internal": "./assets/planet-jupiter-internal.svg",
@@ -142,7 +142,7 @@
     "revolution": "29.46 Years",
     "radius": "58,232 KM",
     "temperature": "-138°c",
-    "size": "h-[256px] w-[256px] md:h-[422px] md:w-[422px] xl:h-[667px] xl:w-[667px]",
+    "size": "h-[256px] w-[256px] md:h-[422px] md:w-[422px] xl:h-[667px] xl:w-[667px] mb-[98px] xl:mb-0",
     "images": {
       "planet": "../../space-fact/public/assets/img/planet-saturn.svg",
       "internal": "./assets/planet-saturn-internal.svg",
@@ -167,7 +167,7 @@
     "revolution": "84 Years",
     "radius": "25,362 KM",
     "temperature": "-195°c",
-    "size": "h-[176px] w-[176px] md:h-[290px] md:w-[290px] xl:h-[458px] xl:w-[458px]",
+    "size": "h-[176px] w-[176px] md:h-[290px] md:w-[290px] xl:h-[458px] xl:w-[458px] mb-[98px] xl:mb-0",
     "images": {
       "planet": "../../space-fact/public/assets/img/planet-uranus.svg",
       "internal": "./assets/planet-uranus-internal.svg",
@@ -192,7 +192,7 @@
     "revolution": "164.79 Years",
     "radius": "24,622 KM",
     "temperature": "-201°c",
-    "size": "h-[176px] w-[176px] md:h-[290px] md:w-[290px] xl:h-[450px] xl:w-[450px]",
+    "size": "h-[176px] w-[176px] md:h-[290px] md:w-[290px] xl:h-[450px] xl:w-[450px] mb-[98px] xl:mb-0",
     "images": {
       "planet": "../../space-fact/public/assets/img/planet-neptune.svg",
       "internal": "./assets/planet-neptune-internal.svg",
