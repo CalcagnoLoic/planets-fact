@@ -4,7 +4,6 @@ import { namePlanet } from "../data/data";
 
 import BaseLayout from "../layouts/BaseLayout.astro";
 import dataFact from "../data/data.json";
-import MobileTabsLayout from "../layouts/MobileTabsLayout.astro";
 import PlanetOverview from "../components/PlanetOverview.astro";
 import PlanetCharacteristic from "../components/PlanetCharacteristic.astro";
 
@@ -15,9 +14,11 @@ const uranusData = dataFact.find((planet) => planet.name === currentPlanet);
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <MobileTabsLayout colorTab="border-b-java" />
-
-  <PlanetOverview planet={uranusData} />
+  <PlanetOverview
+    planet={uranusData}
+    colorTab="border-b-java"
+    activeColor="bg-java"
+  />
 
   <div
     class="mt-8 grid grid-cols-1 gap-2 md:mt-12 md:grid-cols-4 xl:mt-16 xl:gap-8"
