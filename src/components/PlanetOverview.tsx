@@ -13,6 +13,14 @@ const AstroComponent = ({
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
   const [selectedTabDesktop, setSelectedTabDesktop] = useState(tabsDesktop[0]);
 
+  const imageSources: Record<string, string> = {
+    overview: planet?.images.planet || "",
+    structure: planet?.images.internal || "",
+    surface: planet?.images.geology || "",
+  };
+
+  const imageSource = imageSources[selectedTab] || "";
+
   return (
     <section>
       <article className="flex content-around justify-between border-b-[1px] border-b-brightGray py-5 text-xs font-bold uppercase tracking-widest text-brightGray md:hidden">
@@ -34,11 +42,37 @@ const AstroComponent = ({
 
       <article className="flex flex-col items-center xl:flex-row xl:justify-around">
         <div className="xl:w-2/3">
-          <img
-            src={planet?.images.planet}
-            alt={`${planet?.name} Planet`}
-            className={`mt-[95px] xl:mx-auto ${planet?.name}-size`}
-          />
+          {selectedTabDesktop === "overview" &&
+            (selectedTab === "overview" ? (
+              <img
+                src={planet?.images.planet}
+                alt={`${planet?.name} Planet`}
+                className={`mt-[95px] xl:mx-auto ${planet?.name}-size`}
+              />
+            ) : null)}
+          {(selectedTabDesktop === "internal structure" ||
+            selectedTab === "structure") && (
+            <img
+              src={planet?.images.internal}
+              alt={`${planet?.name} Planet`}
+              className={`mt-[95px] xl:mx-auto ${planet?.name}-size`}
+            />
+          )}
+          {(selectedTabDesktop === "surface geology" ||
+            selectedTab === "surface") && (
+            <>
+              <img
+                src={planet?.images.planet}
+                alt={`${planet?.name} Planet`}
+                className={`mt-[95px] xl:mx-auto ${planet?.name}-size`}
+              />
+              <img
+                src={planet?.images.geology}
+                alt={`${planet?.name} Planet`}
+                className="absolute left-1/2 top-1/2 h-16 w-12 -translate-x-1/2 -translate-y-1/2 transform"
+              />
+            </>
+          )}
         </div>
 
         <div className="mt-24 flex justify-around xl:mt-0 xl:w-1/3 xl:flex-col">
