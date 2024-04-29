@@ -1,5 +1,12 @@
+@tailwind components;
+
 @font-face {
   font-family: antonio;
   src: url("../../public/assets/fonts/Antonio/Antonio-Regular.ttf") format(.ttf);
 }
 
+@layer components {
+  .Mercury-size {
+    @apply mb-[98px] h-[111px] w-[111px] md:h-[184px] md:w-[184px] xl:mb-0 xl:h-[290px] xl:w-[290px];
+  }
+}
