@@ -21,7 +21,7 @@ export default {
         tacao: "#ECAD7A",
         goldenrod: "#FCCB6B",
         foam: "#DEF4FC",
-        hurricane: "#8E8585"
+        hurricane: "#8E8585",
       },
       fontFamily: {
         antonio: ["antonio", ...defaultTheme.fontFamily.sans],

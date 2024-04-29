@@ -13,14 +13,6 @@ const AstroComponent = ({
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
   const [selectedTabDesktop, setSelectedTabDesktop] = useState(tabsDesktop[0]);
 
-  const imageSources: Record<string, string> = {
-    overview: planet?.images.planet || "",
-    structure: planet?.images.internal || "",
-    surface: planet?.images.geology || "",
-  };
-
-  const imageSource = imageSources[selectedTab] || "";
-
   return (
     <section>
       <article className="flex content-around justify-between border-b-[1px] border-b-brightGray py-5 text-xs font-bold uppercase tracking-widest text-brightGray md:hidden">
@@ -28,7 +20,7 @@ const AstroComponent = ({
           <div className="cursor-pointer" key={tab}>
             <span
               className={`${
-                selectedTabDesktop === tab
+                selectedTab === tab
                   ? `border-b-4 ${colorTab} pb-4 text-white`
                   : ""
               }`}
@@ -60,18 +52,18 @@ const AstroComponent = ({
           )}
           {(selectedTabDesktop === "surface geology" ||
             selectedTab === "surface") && (
-            <>
+            <div className="relative">
               <img
                 src={planet?.images.planet}
                 alt={`${planet?.name} Planet`}
-                className={`mt-[95px] xl:mx-auto ${planet?.name}-size`}
+                className={`relative mt-[95px] xl:mx-auto ${planet?.name}-size`}
               />
               <img
                 src={planet?.images.geology}
                 alt={`${planet?.name} Planet`}
-                className="absolute left-1/2 top-1/2 h-16 w-12 -translate-x-1/2 -translate-y-1/2 transform"
+                className="absolute left-1/2 top-1/2 h-16 w-12"
               />
-            </>
+            </div>
           )}
         </div>
 
@@ -98,13 +90,36 @@ const AstroComponent = ({
             <div className="flex justify-center gap-4 md:justify-start">
               <p className="mt-8 opacity-70">
                 Source:{" "}
-                <a
-                  href={planet?.overview.source}
-                  target="_blank"
-                  className="font-bold underline"
-                >
-                  Wikipedia
-                </a>
+                {selectedTabDesktop === "overview" &&
+                  (selectedTab === "overview" ? (
+                    <a
+                      href={planet?.overview.source}
+                      target="_blank"
+                      className="font-bold underline"
+                    >
+                      Wikipedia
+                    </a>
+                  ) : null)}
+                {(selectedTabDesktop === "internal structure" ||
+                  selectedTab === "structure") && (
+                  <a
+                    href={planet?.structure.source}
+                    target="_blank"
+                    className="font-bold underline"
+                  >
+                    Wikipedia
+                  </a>
+                )}
+                {(selectedTabDesktop === "surface geology" ||
+                  selectedTab === "surface") && (
+                  <a
+                    href={planet?.geology.source}
+                    target="_blank"
+                    className="font-bold underline"
+                  >
+                    Wikipedia
+                  </a>
+                )}
               </p>
               <Icons kind="src" />
             </div>

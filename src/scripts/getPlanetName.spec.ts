@@ -18,7 +18,7 @@ describe("getPlanetName Unit Test Suite", () => {
   it("should be render Neptune", () => {
     expect(getPlanetName("/space-fact/Neptune", namePlanet)).toBe("Neptune");
   });
-  
+
   it("should be render Venus", () => {
     expect(getPlanetName("/space-fact/Venus", namePlanet)).toBe("Venus");
   });

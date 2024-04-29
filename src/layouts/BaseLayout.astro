@@ -23,7 +23,6 @@ const { pageTitle } = Astro.props;
     />
     <title>{pageTitle}</title>
     <link rel="shortcut icon" href="public/favicon.svg" type="image/x-icon" />
-
   </head>
 
   <body class="bg-blackPearl bg-stars">
@@ -31,7 +30,10 @@ const { pageTitle } = Astro.props;
       <Header />
     </header>
 
-    <main class="mx-6 md:mx-[39px] xl:mx-[165px]" transition:animate={slide({duration: "0.5s"})}>
+    <main
+      class="mx-6 md:mx-[39px] xl:mx-[165px]"
+      transition:animate={slide({ duration: "0.5s" })}
+    >
       <slot />
     </main>
 

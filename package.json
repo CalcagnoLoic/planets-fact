@@ -8,7 +8,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "vitest "
+    "test": "vitest ",
+    "formatter": "prettier --write ."
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",

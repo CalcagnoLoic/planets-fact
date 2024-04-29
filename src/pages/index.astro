@@ -14,12 +14,16 @@ const mercuryData = dataFact.find((planet) => planet.name === currentPlanet);
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <PlanetOverview
-    planet={mercuryData}
-    colorTab="border-b-pelorous"
-    activeColor="bg-pelorous"
-    client:load
-  />
+  {
+    mercuryData && (
+      <PlanetOverview
+        planet={mercuryData}
+        colorTab="border-b-pelorous"
+        activeColor="bg-pelorous"
+        client:load
+      />
+    )
+  }
 
   <div
     class="mt-8 grid grid-cols-1 gap-2 md:mt-12 md:grid-cols-4 xl:mt-16 xl:gap-8"
