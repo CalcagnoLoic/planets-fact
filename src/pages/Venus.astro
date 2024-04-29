@@ -5,7 +5,7 @@ import { namePlanet } from "../data/data";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import dataFact from "../data/data.json";
 import PlanetCharacteristic from "../components/PlanetCharacteristic.astro";
-import PlanetOverview from "../components/PlanetOverview.astro";
+import PlanetOverview from "../components/PlanetOverview";
 
 const pageTitle = "🟡 Venus";
 const currentPlanet = getPlanetName(Astro.url.pathname, namePlanet);
