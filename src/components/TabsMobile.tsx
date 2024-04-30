@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Icons } from "../icons/Icons";
 import type { specializedViews } from "../types/interface";
+import { renderImage } from "../scripts/renderImage";
+import { renderContents } from "../scripts/renderContents";
+import { renderWikipediaLink } from "../scripts/renderWikipediaLink";
 
 const tabs = ["overview", "structure", "surface"];
 
@@ -28,34 +31,7 @@ const AstroComponent = ({ planet, colorTab }: specializedViews) => {
 
       <article className="flex flex-col items-center xl:flex-row xl:justify-around">
         <div className="xl:w-2/3">
-          {selectedTab === "overview" && (
-            <img
-              src={planet?.images.planet}
-              alt={`${planet?.name} Planet`}
-              className={`mt-[95px] xl:mx-auto ${planet?.name}-size`}
-            />
-          )}
-          {selectedTab === "structure" && (
-            <img
-              src={planet?.images.internal}
-              alt={`${planet?.name} Planet`}
-              className={`mt-[95px] xl:mx-auto ${planet?.name}-size`}
-            />
-          )}
-          {selectedTab === "surface" && (
-            <div className="relative">
-              <img
-                src={planet?.images.planet}
-                alt={`${planet?.name} Planet`}
-                className={`relative mt-[95px] xl:mx-auto ${planet?.name}-size`}
-              />
-              <img
-                src={planet?.images.geology}
-                alt={`${planet?.name} Planet`}
-                className="absolute left-[36%] top-[70%] h-[118px] w-[100px]"
-              />
-            </div>
-          )}
+          {renderImage({ tab: selectedTab, planet })}
         </div>
 
         <div className="mt-24 flex justify-around xl:mt-0 xl:w-1/3 xl:flex-col">
@@ -63,42 +39,11 @@ const AstroComponent = ({ planet, colorTab }: specializedViews) => {
             <h1 className="text-center font-antonio text-5xl font-bold uppercase xl:mt-28 xl:text-start xl:text-6xl">
               {planet?.name}
             </h1>
-            <p className="mt-4 text-center md:mt-6 md:text-start">
-              {selectedTab === "overview" && planet?.overview.content}
-              {selectedTab === "structure" && planet?.structure.content}
-              {selectedTab === "surface" && planet?.geology.content}
-            </p>
+            {renderContents({ tab: selectedTab, planet })}
 
             <div className="flex justify-center gap-4 md:justify-start">
               <p className="mt-8 opacity-70">
-                Source:{" "}
-                {selectedTab === "overview" && (
-                  <a
-                    href={planet?.overview.source}
-                    target="_blank"
-                    className="font-bold underline"
-                  >
-                    Wikipedia
-                  </a>
-                )}
-                {selectedTab === "structure" && (
-                  <a
-                    href={planet?.structure.source}
-                    target="_blank"
-                    className="font-bold underline"
-                  >
-                    Wikipedia
-                  </a>
-                )}
-                {selectedTab === "surface" && (
-                  <a
-                    href={planet?.geology.source}
-                    target="_blank"
-                    className="font-bold underline"
-                  >
-                    Wikipedia
-                  </a>
-                )}
+                Source: {renderWikipediaLink({ tab: selectedTab, planet })}
               </p>
               <Icons kind="src" />
             </div>

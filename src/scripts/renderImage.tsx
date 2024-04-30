@@ -9,7 +9,7 @@ export const renderImage = ({ tab, planet }: RenderProps) => {
         className={`mt-[95px] xl:mx-auto ${planet?.name}-size`}
       />
     );
-  } else if (tab === "internal structure") {
+  } else if (tab === "internal structure" || tab === "structure") {
     return (
       <img
         src={planet?.images.internal}
@@ -17,7 +17,7 @@ export const renderImage = ({ tab, planet }: RenderProps) => {
         className={`mt-[95px] xl:mx-auto ${planet?.name}-size`}
       />
     );
-  } else if (tab === "surface geology") {
+  } else if (tab === "surface geology" || tab === "surface") {
     return (
       <div className="relative">
         <img
