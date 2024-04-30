@@ -34,6 +34,11 @@ export interface NavLinkProps {
 
 export interface specializedViews {
   planet: PlanetData;
-  activeColor: string;
-  colorTab: string;
+  activeColor?: string;
+  colorTab?: string;
+}
+
+export interface RenderProps {
+  tab: string
+  planet: PlanetData
 }
