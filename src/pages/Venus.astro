@@ -5,7 +5,8 @@ import { namePlanet } from "../data/data";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import dataFact from "../data/data.json";
 import PlanetCharacteristic from "../components/PlanetCharacteristic.astro";
-import PlanetOverview from "../components/PlanetOverview";
+import TabsDesktop from "../components/TabsDesktop";
+import TabsMobile from "../components/TabsMobile";
 
 const pageTitle = "🟡 Venus";
 const currentPlanet = getPlanetName(Astro.url.pathname, namePlanet);
@@ -14,11 +15,22 @@ const venusData = dataFact.find((planet) => planet.name === currentPlanet);
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <PlanetOverview
-    planet={venusData}
-    colorTab="border-b-tulipTree"
-    activeColor="bg-tulipTree"
-  />
+  {
+    venusData && (
+      <>
+        <TabsDesktop
+          planet={venusData}
+          activeColor="bg-tulipTree"
+          client:load
+        />
+        <TabsMobile
+          planet={venusData}
+          colorTab="border-b-tulipTree"
+          client:load
+        />
+      </>
+    )
+  }
 
   <div
     class="mt-8 grid grid-cols-1 gap-2 md:mt-12 md:grid-cols-4 xl:mt-16 xl:gap-8"

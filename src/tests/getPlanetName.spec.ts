@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { getPlanetName } from "./getPlanetName";
+import { getPlanetName } from "../scripts/getPlanetName";
 import { namePlanet } from "../data/data";
 
 describe("getPlanetName Unit Test Suite", () => {
