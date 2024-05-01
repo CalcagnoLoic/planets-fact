@@ -1,4 +1,4 @@
-name: "Continuous integration on planets-fact"
+name: "Deploy planets-fact on gh page"
 
 on:
   pull_request:
