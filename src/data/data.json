@@ -19,9 +19,9 @@
     "temperature": "430°c",
     "size": "h-[111px] w-[111px] md:h-[184px] md:w-[184px] xl:h-[290px] xl:w-[290px] mb-[98px] xl:mb-0",
     "images": {
-      "planet": "../../planets-fact/public/assets/img/planet-mercury.svg",
-      "internal": "../../planets-fact/public/assets/img/planet-mercury-internal.svg",
-      "geology": "../../planets-fact/public/assets/img/geology-mercury.png"
+      "planet": "../../planets-fact/assets/img/planet-mercury.svg",
+      "internal": "../../planets-fact/assets/img/planet-mercury-internal.svg",
+      "geology": "../../planets-fact/assets/img/geology-mercury.png"
     }
   },
   {
@@ -44,9 +44,9 @@
     "temperature": "471°c",
     "size": "h-[154px] w-[154px] md:h-[253px] md:w-[253px] xl:h-[400px] xl:w-[400px] mb-[98px] xl:mb-0",
     "images": {
-      "planet": "../../planets-fact/public/assets/img/planet-venus.svg",
-      "internal": "../../planets-fact/public/assets/img/planet-venus-internal.svg",
-      "geology": "../../planets-fact/public/assets/img/geology-venus.png"
+      "planet": "../../planets-fact/assets/img/planet-venus.svg",
+      "internal": "../../planets-fact/assets/img/planet-venus-internal.svg",
+      "geology": "../../planets-fact/assets/img/geology-venus.png"
     }
   },
   {
@@ -69,9 +69,9 @@
     "temperature": "16°c",
     "size": "h-[173px] w-[173px] md:h-[285px] md:w-[285px] xl:h-[450px] xl:w-[450px] mb-[98px] xl:mb-0",
     "images": {
-      "planet": "../../planets-fact/public/assets/img/planet-earth.svg",
-      "internal": "../../planets-fact/public/assets/img/planet-earth-internal.svg",
-      "geology": "../../planets-fact/public/assets/img/geology-earth.png"
+      "planet": "../../planets-fact/assets/img/planet-earth.svg",
+      "internal": "../../planets-fact/assets/img/planet-earth-internal.svg",
+      "geology": "../../planets-fact/assets/img/geology-earth.png"
     }
   },
   {
@@ -94,9 +94,9 @@
     "temperature": "-28°c",
     "size": "h-[129px] w-[129px] md:h-[213px] md:w-[213px] xl:h-[336px] xl:w-[336px] mb-[98px] xl:mb-0",
     "images": {
-      "planet": "../../planets-fact/public/assets/img/planet-mars.svg",
-      "internal": "../../planets-fact/public/assets/img/planet-mars-internal.svg",
-      "geology": "../../planets-fact/public/assets/img/geology-mars.png"
+      "planet": "../../planets-fact/assets/img/planet-mars.svg",
+      "internal": "../../planets-fact/assets/img/planet-mars-internal.svg",
+      "geology": "../../planets-fact/assets/img/geology-mars.png"
     }
   },
   {
@@ -119,9 +119,9 @@
     "temperature": "-108°c",
     "size": "h-[224px] w-[224px] md:h-[369px] md:w-[369px] xl:h-[582px] xl:w-[582px] mb-[98px] xl:mb-0",
     "images": {
-      "planet": "../../planets-fact/public/assets/img/planet-jupiter.svg",
-      "internal": "../../planets-fact/public/assets/img/planet-jupiter-internal.svg",
-      "geology": "../../planets-fact/public/assets/img/geology-jupiter.png"
+      "planet": "../../planets-fact/assets/img/planet-jupiter.svg",
+      "internal": "../../planets-fact/assets/img/planet-jupiter-internal.svg",
+      "geology": "../../planets-fact/assets/img/geology-jupiter.png"
     }
   },
   {
@@ -144,9 +144,9 @@
     "temperature": "-138°c",
     "size": "h-[256px] w-[256px] md:h-[422px] md:w-[422px] xl:h-[667px] xl:w-[667px] mb-[98px] xl:mb-0",
     "images": {
-      "planet": "../../planets-fact/public/assets/img/planet-saturn.svg",
-      "internal": "../../planets-fact/public/assets/img/planet-saturn-internal.svg",
-      "geology": "../../planets-fact/public/assets/img/geology-saturn.png"
+      "planet": "../../planets-fact/assets/img/planet-saturn.svg",
+      "internal": "../../planets-fact/assets/img/planet-saturn-internal.svg",
+      "geology": "../../planets-fact/assets/img/geology-saturn.png"
     }
   },
   {
@@ -169,9 +169,9 @@
     "temperature": "-195°c",
     "size": "h-[176px] w-[176px] md:h-[290px] md:w-[290px] xl:h-[458px] xl:w-[458px] mb-[98px] xl:mb-0",
     "images": {
-      "planet": "../../planets-fact/public/assets/img/planet-uranus.svg",
-      "internal": "../../planets-fact/public/assets/img/planet-uranus-internal.svg",
-      "geology": "../../planets-fact/public/assets/img/geology-uranus.png"
+      "planet": "../../planets-fact/assets/img/planet-uranus.svg",
+      "internal": "../../planets-fact/assets/img/planet-uranus-internal.svg",
+      "geology": "../../planets-fact/assets/img/geology-uranus.png"
     }
   },
   {
@@ -194,9 +194,9 @@
     "temperature": "-201°c",
     "size": "h-[176px] w-[176px] md:h-[290px] md:w-[290px] xl:h-[450px] xl:w-[450px] mb-[98px] xl:mb-0",
     "images": {
-      "planet": "../../planets-fact/public/assets/img/planet-neptune.svg",
-      "internal": "../../planets-fact/public/assets/img/planet-neptune-internal.svg",
-      "geology": "../../planets-fact/public/assets/img/geology-neptune.png"
+      "planet": "../../planets-fact/assets/img/planet-neptune.svg",
+      "internal": "../../planets-fact/assets/img/planet-neptune-internal.svg",
+      "geology": "../../planets-fact/assets/img/geology-neptune.png"
     }
   }
 ]
