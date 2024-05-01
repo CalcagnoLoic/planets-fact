@@ -7,6 +7,6 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   integrations: [tailwind(), react()],
   base: "/planets-fact/",
-  output: "server",
+  output: "hybrid",
   adapter: netlify(),
 });
