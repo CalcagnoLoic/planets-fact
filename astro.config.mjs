@@ -8,6 +8,6 @@ export default defineConfig({
   integrations: [tailwind(), react()],
   site: "https://calcagnoloic.github.io",
   base: "/planets-fact/",
-  output: "server",
+  output: "static",
   adapter: netlify(),
 });
