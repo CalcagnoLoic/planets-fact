@@ -15,6 +15,10 @@ const { pageTitle } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Calcagno Loïc" />
     <meta name="description" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Interactive site showing several characteristics of the planets in our solar system. You can see the planet's general characteristics, characteristics of the planet's strata, characteristics of the planet's geological surface and the planet's physical characteristics"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,6 +27,7 @@ const { pageTitle } = Astro.props;
     />
     <title>{pageTitle}</title>
     <link rel="shortcut icon" href="public/favicon.svg" type="image/x-icon" />
+    <ViewTransitions />
   </head>
 
   <body class="bg-blackPearl bg-stars">

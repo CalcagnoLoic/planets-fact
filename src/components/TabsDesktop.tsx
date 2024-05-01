@@ -18,7 +18,7 @@ const AstroComponent = ({ planet, activeColor }: specializedViews) => {
 
         <div className="mt-24 flex justify-around xl:mt-0 xl:w-1/3 xl:flex-col">
           <div className="text-white md:w-1/2 xl:w-full">
-            <h1 className="text-center font-antonio text-5xl font-bold uppercase xl:mt-28 xl:text-start xl:text-6xl">
+            <h1 className="mb-5 text-center font-antonio text-5xl font-bold uppercase md:text-start xl:mt-28 xl:text-6xl">
               {planet?.name}
             </h1>
 
