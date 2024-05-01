@@ -12,7 +12,7 @@ const currentPlanet = getPlanetName(Astro.url.pathname, namePlanet);
       namePlanet.map((planet) => (
         <a
           class="cursor-pointer uppercase text-white opacity-80"
-          href={`/space-fact/${planet.name === "Mercury" ? "" : planet.name}`}
+          href={`/planets-fact/${planet.name === "Mercury" ? "" : planet.name}`}
         >
           <span
             class={`border-b-4 md:pb-8 xl:pb-9 ${currentPlanet === planet.name ? planet.borderColor : "border-b-transparent"}`}

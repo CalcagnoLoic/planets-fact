@@ -1,12 +1,13 @@
 ---
-import { getPlanetName } from "../scripts/getPlanetName";
-import { namePlanet } from "../data/data";
+import { getPlanetName } from "@scripts/getPlanetName";
+import { namePlanet } from "@data/data";
 
-import BaseLayout from "../layouts/BaseLayout.astro";
-import dataFact from "../data/data.json";
-import PlanetCharacteristic from "../components/PlanetCharacteristic.astro";
-import TabsDesktop from "../components/TabsDesktop";
-import TabsMobile from "../components/TabsMobile";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import CharacteristicLayout from "@layouts/CharacteristicLayout.astro";
+import dataFact from "@data/data.json";
+import PlanetCharacteristic from "@components/PlanetCharacteristic.astro";
+import TabsDesktop from "@components/TabsDesktop";
+import TabsMobile from "@components/TabsMobile";
 
 const pageTitle = "🟡 Venus";
 const currentPlanet = getPlanetName(Astro.url.pathname, namePlanet);
@@ -32,9 +33,7 @@ const venusData = dataFact.find((planet) => planet.name === currentPlanet);
     )
   }
 
-  <div
-    class="mt-8 grid grid-cols-1 gap-2 md:mt-12 md:grid-cols-4 xl:mt-16 xl:gap-8"
-  >
+  <CharacteristicLayout>
     <PlanetCharacteristic
       characteristic="rotation time"
       data={venusData?.rotation}
@@ -48,5 +47,5 @@ const venusData = dataFact.find((planet) => planet.name === currentPlanet);
       characteristic="average temp."
       data={venusData?.temperature}
     />
-  </div>
+  </CharacteristicLayout>
 </BaseLayout>

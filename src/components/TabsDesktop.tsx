@@ -1,8 +1,8 @@
-import { useState } from "react";
 import { Icons } from "../icons/Icons";
 import { renderWikipediaLink } from "../scripts/renderWikipediaLink";
 import { renderContents } from "../scripts/renderContents";
 import { renderImage } from "../scripts/renderImage";
+import { useState } from "react";
 import type { specializedViews } from "../types/interface";
 
 const AstroComponent = ({ planet, activeColor }: specializedViews) => {

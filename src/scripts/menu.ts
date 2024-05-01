@@ -6,7 +6,7 @@ const toogleMenu = (): void => {
   if (!menuIsOpen) {
     menu?.classList.remove("hidden");
     menuIsOpen = true;
-    document.body.classList.add("overflow-hidden")
+    document.body.classList.add("overflow-hidden");
   } else {
     menu?.classList.add("hidden");
     menuIsOpen = false;

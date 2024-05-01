@@ -1,12 +1,12 @@
 ---
-import { Icons } from "../icons/Icons";
+import { Icons } from "@icons/Icons";
 
 const { color, name, target } = Astro.props;
 ---
 
 <a
   class="flex justify-between border-b-[1px] border-b-brightGray p-5"
-  href={`/space-fact/${target}`}
+  href={`/planets-fact/${target}`}
 >
   <div class="flex gap-5">
     <div class={`w-5 h-5 rounded-full ${color}`}></div>
