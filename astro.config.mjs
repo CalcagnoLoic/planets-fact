@@ -6,6 +6,7 @@ import netlify from "@astrojs/netlify";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), react()],
+  site: "https://calcagnoloic.github.io",
   base: "/planets-fact/",
   output: "server",
   adapter: netlify(),
