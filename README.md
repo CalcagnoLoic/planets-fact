@@ -1,11 +1,5 @@
 # Planets facts
 
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=astro,ts,react,tailwind" />
-  </a>
-</p>
-
 Interactive site showing several characteristics of the planets in our solar system. You can see
 
 - the planet's general characteristics
@@ -14,10 +8,16 @@ Interactive site showing several characteristics of the planets in our solar sys
 - the planet's physical characteristics
 
 <p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=astro,ts,react,tailwind" />
+  </a>
+</p>
+
+<p align="center">
     <img src="./public/assets/img/readme.webp" width="70%" />
 </p>
 
-| the planet's strata                    | the planet's geological surface       |
+| The planet's strata                    | The planet's geological surface       |
 | -------------------------------------- | ------------------------------------- |
 | ![](./public/assets/img/internal.webp) | ![](./public/assets/img/surface.webp) |
 
