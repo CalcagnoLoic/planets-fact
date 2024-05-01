@@ -20,6 +20,7 @@ type PlanetData = {
   revolution: string;
   radius: string;
   temperature: string;
+  size: string;
   images: {
     planet: string;
     internal: string;
@@ -39,6 +40,6 @@ export interface specializedViews {
 }
 
 export interface RenderProps {
-  tab: string
-  planet: PlanetData
+  tab: string;
+  planet: PlanetData;
 }

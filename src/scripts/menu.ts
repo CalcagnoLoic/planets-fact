@@ -1,19 +1,15 @@
-let menuIsOpen = false;
+document.addEventListener("astro:page-load", () => {
+  document.querySelector(".hamburger")?.addEventListener("click", () => {
+    const menu = document.querySelector(".menu-dropdown");
+    let menuIsOpen = false;
 
-const toogleMenu = (): void => {
-  const menu = document.querySelector(".menu-dropdown");
-
-  if (!menuIsOpen) {
-    menu?.classList.remove("hidden");
-    menuIsOpen = true;
-    document.body.classList.add("overflow-hidden")
-  } else {
-    menu?.classList.add("hidden");
-    menuIsOpen = false;
-  }
-};
-
-document.addEventListener("DOMContentLoaded", () => {
-  const menu = document.querySelector(".hamburger");
-  menu?.addEventListener("click", toogleMenu);
+    if (!menuIsOpen) {
+      menu?.classList.remove("hidden");
+      menuIsOpen = true;
+      document.body.classList.add("overflow-hidden");
+    } else {
+      menu?.classList.add("hidden");
+      menuIsOpen = false;
+    }
+  });
 });

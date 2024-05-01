@@ -1,9 +1,9 @@
-import { useState } from "react";
 import { Icons } from "../icons/Icons";
-import type { specializedViews } from "../types/interface";
 import { renderImage } from "../scripts/renderImage";
 import { renderContents } from "../scripts/renderContents";
 import { renderWikipediaLink } from "../scripts/renderWikipediaLink";
+import type { specializedViews } from "../types/interface";
+import { useState } from "react";
 
 const tabs = ["overview", "structure", "surface"];
 

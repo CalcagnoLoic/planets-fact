@@ -6,7 +6,12 @@
 }
 
 @layer components {
-  .Mercury-size {
-    @apply mb-[98px] h-[111px] w-[111px] md:h-[184px] md:w-[184px] xl:mb-0 xl:h-[290px] xl:w-[290px];
+  .contents {
+    @apply mt-4 text-center md:mt-6 md:text-start;
   }
+
+  .source {
+    @apply font-bold underline;
+  }
+
 }

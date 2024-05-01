@@ -1,4 +1,4 @@
-name: "Continuous integration on space-fact"
+name: "Continuous integration on planets-fact"
 
 on:
   pull_request:

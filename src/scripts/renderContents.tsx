@@ -1,23 +1,16 @@
 import type { RenderProps } from "../types/interface";
 
 export const renderContents = ({ tab, planet }: RenderProps) => {
-  if (tab === "overview") {
-    return (
-      <p className="mt-4 text-center md:mt-6 md:text-start">
-        {planet?.overview.content}
-      </p>
-    );
-  } else if (tab === "internal structure" || tab === "structure") {
-    return (
-      <p className="mt-4 text-center md:mt-6 md:text-start">
-        {planet?.structure.content}
-      </p>
-    );
-  } else if (tab === "surface geology" || tab === "surface") {
-    return (
-      <p className="mt-4 text-center md:mt-6 md:text-start">
-        {planet?.geology.content}
-      </p>
-    );
+  switch (tab) {
+    case "structure":
+    case "internal structure":
+      return <p className="contents">{planet?.structure.content}</p>;
+
+    case "surface":
+    case "surface geology":
+      return <p className="contents">{planet?.geology.content}</p>;
+
+    default:
+      return <p className="contents">{planet?.overview.content}</p>;
   }
 };
