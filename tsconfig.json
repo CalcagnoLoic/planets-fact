@@ -10,6 +10,7 @@
       "@icons/*": ["icons/*"],
       "@layouts/*": ["layouts/*"],
       "@scripts/*": ["scripts/*"],
+      "@style/*": ["style/*"],
       "@types/*": ["types/*"]
     }
   },
