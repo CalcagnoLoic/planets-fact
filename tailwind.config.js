@@ -27,7 +27,7 @@ export default {
         antonio: ["antonio", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
-        stars: "url(./public/assets/img/background.svg)",
+        stars: "url(./assets/img/background.svg)",
       },
     },
   },
