@@ -28,9 +28,16 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
     <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
     <ViewTransitions />
+    <style>
+      .background-image {
+        background-image: url("./planets-fact/assets/img/background.svg");
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
   </head>
 
-  <body class="bg-blackPearl bg-stars">
+  <body class="background-image bg-blackPearl">
     <header class="border-b-[1px] border-b-brightGray">
       <Header />
     </header>
